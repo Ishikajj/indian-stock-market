@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# uv
+# uv.lock is intentionally committed (reproducible installs)
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+
+# Data — raw data files (large, often proprietary)
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.xls
+# Keep generated charts committed (useful for quick preview without re-running)
+# data/processed/  ← intentionally NOT ignored
