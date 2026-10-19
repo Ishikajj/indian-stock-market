@@ -1,7 +1,41 @@
 [project]
 name = "indian-stock-market"
 version = "0.1.0"
-description = "Add your description here"
+description = "Indian stock market: index vs active funds vs gold vs bonds, Fama-French factors"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.11"
+dependencies = [
+    "yfinance>=0.2.28",
+    "mftool>=2.0.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.15.0",
+    "scipy>=1.11.0",
+    "statsmodels>=0.14.0",
+    "scikit-learn>=1.3.0",
+    "pandas-datareader>=0.10.0",
+    "jupyterlab>=4.0.0",
+    "ipywidgets>=8.0.0",
+    "openpyxl>=3.1.0",
+    "nbformat>=5.9.0",
+    "kaleido>=0.2.1",
+]
+
+[tool.ruff]
+line-length = 100
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+# I = isort (import sorting) — required for source.organizeImports.ruff to do anything
+# E/W = pycodestyle errors/warnings, F = pyflakes
+select = ["E", "F", "W", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.1",
+]
